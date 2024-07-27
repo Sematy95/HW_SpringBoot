@@ -25,8 +25,8 @@ public class CalcServiceImpl implements CalcService {
 
     public String calcMultiply(int numb1, int numb2) {
         int result = numb1 * numb2;
-        String answer = numb1 + " * " + numb2 + " = " + result;
-        return answer;
+        String answer1 = numb1 + " * " + numb2 + " = " + result;
+        return answer1;
     }
 
 
