@@ -1,6 +1,7 @@
-package pro.sky.calc;
+package pro.sky.calc.service;
 
 import org.springframework.stereotype.Service;
+import pro.sky.calc.exceptions.DivideZeroException;
 
 @Service
 public class CalcServiceImpl implements CalcService {
@@ -34,10 +35,10 @@ public class CalcServiceImpl implements CalcService {
         String answer;
         if (numb2 == 0) {
             answer = "Делить на 0 нельзя, ошибка!";
+            throw new DivideZeroException();
         } else {
             float result = (float) numb1 / numb2;
             answer = numb1 + " / " + numb2 + " = " + result;
-        }
-        return answer;
+        } return answer;
     }
 }
