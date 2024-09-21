@@ -10,35 +10,39 @@ public class CalcServiceImpl implements CalcService {
         return "Добро пожаловать в калькулятор";
     }
 
-    public String calcPlus(int numb1, int numb2) {
-        int sum = numb1 + numb2;
+    public String calcPlus(Integer numb1, Integer numb2) {
+        if (numb1 == null || numb1 == null) throw new IllegalArgumentException();
+        Integer sum = numb1 + numb2;
         String answer = numb1 + " + " + numb2 + " = " + sum;
         return answer;
     }
 
 
-    public String calcMinus(int numb1, int numb2) {
+    public String calcMinus(Integer numb1, Integer numb2) {
+        if (numb1 == null || numb1 == null) throw new IllegalArgumentException();
         int sum = numb1 - numb2;
         String answer = numb1 + " - " + numb2 + " = " + sum;
         return answer;
     }
 
 
-    public String calcMultiply(int numb1, int numb2) {
+    public String calcMultiply(Integer numb1, Integer numb2) {
+        if (numb1 == null || numb1 == null) throw new IllegalArgumentException();
         int result = numb1 * numb2;
         String answer = numb1 + " * " + numb2 + " = " + result;
         return answer;
     }
 
 
-    public String calcDivide(int numb1, int numb2) {
+    public String calcDivide(Integer numb1, Integer numb2) {
+        if (numb1 == null || numb1 == null) throw new IllegalArgumentException();
         String answer;
         if (numb2 == 0) {
-            answer = "Делить на 0 нельзя, ошибка!";
             throw new DivideZeroException();
         } else {
             float result = (float) numb1 / numb2;
             answer = numb1 + " / " + numb2 + " = " + result;
-        } return answer;
+        }
+        return answer;
     }
 }
