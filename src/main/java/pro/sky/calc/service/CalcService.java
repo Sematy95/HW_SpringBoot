@@ -3,12 +3,12 @@ package pro.sky.calc.service;
 public interface CalcService {
     String helloCalc();
 
-    String calcPlus(int numb1, int numb2);
+    String calcPlus(Integer numb1, Integer numb2);
 
-    String calcMinus(int numb1, int numb2);
+    String calcMinus(Integer numb1, Integer numb2);
 
-    String calcMultiply(int numb1, int numb2);
+    String calcMultiply(Integer numb1, Integer numb2);
 
-    String calcDivide(int numb1, int numb2);
+    String calcDivide(Integer numb1, Integer numb2);
 
 }
