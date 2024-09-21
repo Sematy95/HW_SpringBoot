@@ -34,7 +34,6 @@ public class CalcServiceImpl implements CalcService {
     public String calcDivide(int numb1, int numb2) {
         String answer;
         if (numb2 == 0) {
-            answer = "Делить на 0 нельзя, ошибка!";
             throw new DivideZeroException();
         } else {
             float result = (float) numb1 / numb2;
